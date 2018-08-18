@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/paisaje2.1.ico">
+    <link rel="stylesheet" href="estilos/master.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>ejemplo 1 - funciones que retornan valor</h3>
+                <p><b><i>=> funcion que al ingresar un numero devuelve este en castellano</i></b></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function convertirCastellano(num){
+            cadena = "";
+            switch(num){
+                case 1: cadena = "uno";
+                    break;
+                case 2: cadena = "dos";
+                    break;
+                case 3: cadena = "tres";
+                    break;
+                case 4: cadena = "cuatro";
+                    break;
+                case 5: cadena = "cinco";
+                    break;
+                default:
+                    cadena = "incorrecto!";
+            }
+            return cadena;
+        }
+        var numero = prompt("numero: ");
+        numero = parseInt(numero);
+        var resul = convertirCastellano(numero);
+        document.write(resul)
+        console.log("numero elegido: " + numero);
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>problema 2 - control SELECT</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calcularPresupuesto() {
+            var id_procesador = document.getElementById('procesador');
+            var precio_procesador = id_procesador.options[id_procesador.selectedIndex].value;
+            document.getElementById('p_procesador').value = precio_procesador;
+            precio_procesador = parseInt(precio_procesador);
+            console.log("precio procesador: " + precio_procesador);
+
+            var id_monitor = document.getElementById('monitor');
+            var precio_monitor = id_monitor.options[id_monitor.selectedIndex].value;
+            document.getElementById('p_monitor').value = precio_monitor;
+            precio_monitor = parseInt(precio_monitor);
+            console.log("precio monitor: " + precio_monitor);
+
+            var id_dd = document.getElementById('dd');
+            var precio_dd = id_dd.options[id_dd.selectedIndex].value;
+            document.getElementById('p_dd').value = precio_dd;
+            precio_dd = parseInt(precio_dd);
+            console.log("precio disco duro: " + precio_dd);
+
+            var costoTotal = 0;
+            costoTotal = precio_procesador + precio_monitor + precio_dd;
+            console.log("costo total: " + costoTotal);
+
+            document.getElementById('costo_total').value = costoTotal;
+
+        }
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <br>
+                <form action="">
+                    <label for="procesador">
+                        <b>procesador:</b>
+                    </label>
+                    <select name="" id="procesador">
+                        <option value="400">intel i3</option>
+                        <option value="600">intel i5</option>
+                        <option value="800">intel i7</option>
+                    </select>
+                    &nbsp;&nbsp;
+                    <label for="monitor">
+                        <b>monitor:</b>
+                    </label>
+                    <select name="" id="monitor">
+                        <option value="250">samsung 20'</option>
+                        <option value="350">samsung 22'</option>
+                        <option value="550">samsung 26'</option>
+                    </select>
+                    &nbsp;&nbsp;
+                    <label for="dd">
+                        <b>disco duro:</b>
+                    </label>
+                    <select name="" id="dd">
+                        <option value="300">500 gb</option>
+                        <option value="440">1 tb</option>
+                        <option value="500">3 tb</option>
+                    </select>
+                    <br><br>
+                    <label for="p_procesador">
+                        <b>precio procesador:</b>
+                        <input type="text" id="p_procesador" size="9">
+                    </label>
+                    &nbsp;&nbsp;
+                    <label for="p_monitor">
+                        <b>precio monitor:</b>
+                        <input type="text" id="p_monitor" size="9">
+                    </label>
+                    &nbsp;&nbsp;
+                    <label for="p_dd">
+                        <b>precio disco duro:</b>
+                        <input type="text" id="p_dd" size="9">
+                    </label>
+                    <br><br>
+                    <label for="costo_total">
+                        <b>total a pagar:</b>
+                        <input type="text" id="costo_total" size="12">
+                    </label>
+                    <br><br>
+
+                    <input type="button" onclick="calcularPresupuesto()" value="calcular">
+                    <input type="reset" value="limpiar">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

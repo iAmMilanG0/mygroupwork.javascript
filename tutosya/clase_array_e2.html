@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tutos-js</title>
+	<meta charset="utf-8">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imagenes/paisaje.png">
+    <link rel="stylesheet" href="estilos/master.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>problema 2 - clase Array()</h3>
+            </div>
+        </div>
+    </div>
+	<script>
+		function cargarV1(vector1){
+			for (var i = 0; i < vector1.length; i++) {
+				valor1 = prompt("valor: "," ");
+				vector1[i] = parseInt(valor1);
+			}
+			console.log("LISTADO DEL VECTOR 1:");
+			for (var i = 0; i < vector1.length; i++) {
+				console.log(vector1[i]);
+			}
+		}
+
+		function cargarV2(vector2){
+			for (var i = 0; i < vector2.length; i++) {
+				valor2 = prompt("valor: "," ");
+				vector2[i] = parseInt(valor2);
+			}
+			console.log("LISTADO DEL VECTOR 2:");
+			for (var i = 0; i < vector2.length; i++) {
+				console.log(vector2[i]);
+			}
+		}
+
+		function sumaVectores(vector1,vector2,vector3){
+            document.write("<b><i>LISTADO DE LA SUMA DEL VECTOR 1 Y VECTOR 2:</i></b><br>");
+			for (var i = 0; i < vector3.length; i++) {
+				vector3[i] = vector1[i] + vector2[i];
+                document.write(vector3[i] + ' ');
+			}
+			/*document.write("<b><i>LISTADO DE LA SUMA DEL VECTOR 1 Y VECTOR 2</i></b><br>");
+			for (var i = 0; i < vector3.length; i++) {
+                document.write(vector3[i] + ' ');   
+			}*/
+		}
+
+		var vector1,vector2,vector3;
+		vector1 = new Array(5);
+		vector2 = new Array(5);
+		vector3 = new Array(5);
+		cargarV1(vector1);
+		cargarV2(vector2);
+		sumaVectores(vector1,vector2,vector3);
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>problema 3 - control SELECT</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function mostrarImporte() {
+            var seleccion = document.getElementById('pizza');
+
+            var precio = seleccion.options[seleccion.selectedIndex].value;
+            precio = parseInt(precio);
+            console.log("precio: " + precio);
+
+            var cantidad = document.getElementById('cantidad').value;
+            cantidad = parseInt(cantidad);
+            console.log("cantidad: " + cantidad);
+
+            var total = precio * cantidad;
+            console.log("importe total: " + precio*cantidad);
+
+            document.getElementById('total').value = "Bs.- " + total;
+        }
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <br>
+                <form action="">
+                    <label for="">
+                        <b>elige una pizza:</b>
+                    </label>
+                    <select name="" id="pizza">
+                        <option value="4">queso</option>
+                        <option value="6">jamon y queso</option>
+                        <option value="10">especial</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="cantidad">
+                        <b>cantidad:</b>
+                        <input type="text" name="" id="cantidad" size="6">
+                    </label>
+                    <br><br>
+
+                    <label for="total">
+                        <b>importe total:</b>
+                        <input type="text" name="" id="total" size="8">
+                    </label>
+                    <br><br>
+                    <input type="button" value="calcular" onclick="mostrarImporte()">
+                    <input type="reset" value="limpiar">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

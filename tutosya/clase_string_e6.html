@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>problema 6 - clase string</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <script>
+                    function primeraMitad(cadena) {
+                        var longitudCadena = cadena.length; // 10
+                        var mitadCadena = Math.round(longitudCadena / 2); // 10/2=5, 11/2=6
+                        document.writeln("cadena original: " + "<b>"+ cadena +"</b>");
+                        document.writeln("<br>")
+                        document.writeln("primera mitad de la cadena: " + "<b>" + cadena.substring(0,mitadCadena) + "</b>");
+                        document.writeln("<br>");
+                        console.log(longitudCadena);
+                        console.log(mitadCadena);
+                    }
+
+                    function ultimoCaracter(cadena) {
+                        document.writeln("ultimo caracter de la cadena: " 
+                        + "<b>" + cadena.charAt(cadena.length-1) + "</b>");
+                        document.writeln("<br>");
+                    }
+                    
+                    function cadenaInversa(cadena) {
+                        var textoInverso = "";
+                        for (var i=cadena.length-1; i>=0; i--){
+                            var caracter = cadena.charAt(i);
+                            textoInverso = textoInverso + caracter;
+                            //console.log(caracter);
+                        }
+                        document.writeln("cadena en forma inversa: " + "<b>" + textoInverso + "</b>");
+                        document.writeln("<br>");
+                    }
+                    
+                    function separadoxGuion(cadena) {
+                        var nuevaCadena = "";
+                        for (var i=0; i<cadena.length; i++){
+                            var union = cadena.charAt(i) + '-';
+                            nuevaCadena = nuevaCadena + union;
+                            console.log(nuevaCadena);
+                        }
+                        document.writeln("caracteres de la cadena separada por un guion: " + "<b>"+ nuevaCadena+"</b>");
+                        document.writeln("<br>");
+                    }
+                    
+                    function cantidadVocales(cadena) {
+                        var conta = 0;
+                        for (var i=0; i<cadena.length; i++){
+                            if (cadena.charAt(i) == 'a' || cadena.charAt(i) == 'e' || cadena.charAt(i) == 'i' || cadena.charAt(i) == 'o' || cadena.charAt(i) == 'u'){
+                                conta = conta + 1;
+                            }
+                        }
+                        document.writeln("cantidad de vocales en la cadena son: " + "<b>" + conta + "</b>");
+                        document.writeln("<br>");
+                    }
+
+                    var texto = prompt("ingrese cadena: ");
+                    primeraMitad(texto);
+                    ultimoCaracter(texto);
+                    cadenaInversa(texto);
+                    separadoxGuion(texto);
+                    cantidadVocales(texto);
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

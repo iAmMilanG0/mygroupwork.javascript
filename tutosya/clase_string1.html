@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>ejemplo 1 - clase string</h3>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <script>
+                    var cadena = prompt("ingrese cadena: ");
+                    document.writeln("la cadena que ingrese es: " + cadena + "<br>");
+                    document.writeln("cantidad de caracteres son: " + cadena.length + "<br>");
+                    document.writeln("el primer caracter de la cadena es: " + cadena.charAt(0) + "<br>");
+                    document.writeln("los tres primeros caracteres de la cadena son: " + cadena.substring(0,3) + "<br>");
+                    if (cadena.indexOf("maravilla") != -1) {
+                        console.log("la palabra se encuentra dentro de la cadena");
+                    } else {
+                        console.log("la cadena no se encuentra dentro de la cadena");
+                    }
+                    document.writeln("cadena convertida en minusculas: " + cadena.toUpperCase() + "<br>");
+                    document.writeln("cadena convertida en mayusculas: " + cadena.toLowerCase() + "<br>");
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

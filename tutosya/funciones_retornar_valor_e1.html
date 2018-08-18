@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imagenes/camara.png">
+    <link rel="stylesheet" href="estilos/master.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>problema 1 - funciones que retornan valor</h3>
+                <p><b><i>=> problema para devolver un numero mayor de entre tres numros</i></b></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function mostrarMayor(num1, num2, num3){
+            var mayor;
+            if (num1 > num2 && num1 > num3){
+                mayor = num1;
+            } else if (num2 > num1 && num2 > num3){
+                mayor = num2;
+            } else if(num3 > num1 && num3 > num2){
+                mayor = num3;
+            }
+            return mayor;
+        }
+        var numero1, numero2, numero3;
+        numero1 = prompt("numero 1: ");
+        numero1 = parseInt(numero1);
+        numero2 = prompt("numero 2: ");
+        numero2 = parseInt(numero2);
+        numero3 = prompt("numero 3: ");
+        numero3 = parseInt(numero3);
+        console.log(numero1);
+        console.log(numero2);
+        console.log(numero3);
+        numeroMayor = mostrarMayor(numero1, numero2, numero3);
+        document.write("el mayor de los numeros es: " + numeroMayor);
+    </script>
+</body>
+</html>

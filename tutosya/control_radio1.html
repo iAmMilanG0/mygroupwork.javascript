@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>ejemplo 1 - control RADIO</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function nivelEstudios(argument) {
+            var sinEstudios = document.getElementById('rdo1');
+            var primarios = document.getElementById('rdo2');
+            var secundarios = document.getElementById('rdo3');
+            var universitarios = document.getElementById('rdo4');
+
+            var mensaje = "";
+            if (sinEstudios.checked) {
+                alert("no tiene estudios");
+                mensaje += "no tiene estudios";
+            }
+            if (primarios.checked) {
+                alert("tiene estudios primarios");
+                mensaje += "tiene estudios primarios";
+            }
+            if (secundarios.checked) {
+                alert("tiene estudios secundarios");
+                mensaje += "tiene estudios secundarios";
+            }
+            if (universitarios.checked) {
+                alert("tiene estudios universitarios");
+                mensaje += "tiene estudios universitarios";
+            }
+            
+            console.log("usted " + mensaje);
+        }
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <br>
+                <form action="">
+                    <b>estudios actuales:</b>
+                    <br>
+                    <label for="rdo1">
+                        <input type="radio" id="rdo1" name="estudios"> sin estudios
+                    </label>
+                    <br>
+                    <label for="rdo2">
+                        <input type="radio" id="rdo2" name="estudios"> primarios
+                    </label>
+                    <br>
+                    <label for="rdo3">
+                        <input type="radio" id="rdo3" name="estudios"> secundarios
+                    </label>
+                    <br>
+                    <label for="rdo4">
+                        <input type="radio" id="rdo4" name="estudios"> universitarios
+                    </label>
+                    <br><br>
+                    <input type="button" onclick="nivelEstudios()" value="mostrar">
+                    <input type="reset" value="limpiar">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

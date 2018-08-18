@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>problema 4 - control SELECT</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function examenChoice() {
+            var correctos = 0;
+            var incorrectos = 0;
+
+            var color = document.getElementById('color');
+            var valorColor = color.options[color.selectedIndex].value;
+            //var textoColor = color.options[color.selectedIndex].text;
+            if (valorColor == "red"){
+                correctos = correctos + 1;
+            } else {
+                incorrectos = incorrectos + 1;
+            }
+
+            var mascota = document.getElementById('mascota');
+            var valorMascota = mascota.options[mascota.selectedIndex].value;
+            //var textoMascota = mascota.options[mascota.selectedIndex].text;
+            if (valorMascota == "dog"){
+                correctos = correctos + 1;
+            } else {
+                incorrectos = incorrectos + 1;
+            }
+
+            var cosa = document.getElementById('cosa');
+            var valorCosa = cosa.options[cosa.selectedIndex].value;
+            //var textoCosa = cosa.options[cosa.selectedIndex].text;
+            if (valorCosa == "table"){
+                correctos = correctos + 1;
+            } else {
+                incorrectos = incorrectos + 1;
+            }
+
+            var ropa = document.getElementById('ropa');
+            var valorRopa = ropa.options[ropa.selectedIndex].value;
+            //var textoRopa = ropa.options[ropa.selectedIndex].text;
+            if (valorRopa == "pants"){
+                correctos = correctos + 1;
+            } else {
+                incorrectos = incorrectos + 1;
+            }
+
+            alert("correctos: " + correctos + "\nincorrectos: " + incorrectos);
+
+            console.log("total preguntas correctas: " + correctos);
+            console.log("total preguntas incorrectas: " + incorrectos);
+        }
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <br>
+                <form action="">
+                    <label for="">
+                        <b>rojo en ingles:</b>
+                    </label>
+                    <select name="" id="color">
+                        <option value="yellow">yellow</option>
+                        <option value="blue">blue</option>
+                        <option value="red">red</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="">
+                        <b>perro en ingles:</b>
+                    </label>
+                    <select name="" id="mascota">
+                        <option value="cat">cat</option>
+                        <option value="dog">dog</option>
+                        <option value="fish">fish</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="">
+                        <b>mesa en ingles:</b>
+                    </label>
+                    <select name="" id="cosa">
+                        <option value="table">table</option>
+                        <option value="chair">chair</option>
+                        <option value="window">window</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="">
+                        <b>pantalon en ingles:</b>
+                    </label>
+                    <select name="" id="ropa">
+                        <option value="shirt">shirt</option>
+                        <option value="pants">pants</option>
+                        <option value="sweater">sweater</option>
+                    </select>
+                    <br><br>
+
+                    <input type="button" onclick="examenChoice()" value="ver respuestas">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="limpiar">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

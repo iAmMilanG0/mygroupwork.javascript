@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>tutos-js</title>
+</head>
+<body>
+	<h3>ejercicio 1 - clase math</h3>
+	<script>
+		var numero = prompt("ingrese numero entre 1 y 10: "," ");
+		numero = parseInt(numero);
+		var numero_aleatorio = parseInt(Math.random()*10);
+		if (numero_aleatorio == numero) {
+			console.log("gano, el numero que se sorteo es el " + numero_aleatorio);
+		} else {
+			console.log("los siento, se sorteo el valor " + numero_aleatorio + " y usted eligio el " + numero);
+		}
+	</script>
+</body>
+</html>

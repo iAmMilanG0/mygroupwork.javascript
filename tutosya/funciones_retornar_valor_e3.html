@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tutosya-js</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imagenes/camara.png">
+    <link rel="stylesheet" href="estilos/master.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>problema 3 - funciones que retornan valor</h3>
+                <p><b><i>=> problema que recibe tres numeros en la funcion y retorna el promedio</i></b></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function mostrarPromedio(num1, num2, num3){
+            var suma = 0; 
+            var promedio;
+            suma = num1 + num2 + num3;
+            promedio = suma / 3;
+            return promedio;
+        }
+        var numero1, numero2, numero3;
+        numero1 = prompt("numero 1: ");
+        numero1 = parseInt(numero1);
+        numero2 = prompt("numero 2: ");
+        numero2 = parseInt(numero2);
+        numero3 = prompt("numero 3: ");
+        numero3 = parseInt(numero3);
+        var promedio = mostrarPromedio(numero1, numero2, numero3);
+        document.write("el promedio de los numeros es " + promedio);
+    </script>
+</body>
+</html>
